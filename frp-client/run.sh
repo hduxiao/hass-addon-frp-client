@@ -1,6 +1,6 @@
 #!/usr/bin/env bashio
 WAIT_PIDS=()
-CONFIG_PATH='/share/frpc.toml'
+CONFIG_PATH='/share/frp/frpc.toml'
 DEFAULT_CONFIG_PATH='/frpc.toml'
 
 function stop_frpc() {
@@ -27,7 +27,7 @@ cat $CONFIG_PATH
 cd /usr/src
 ./frpc -c $CONFIG_PATH & WAIT_PIDS+=($!)
 
-tail -f /share/frpc.log &
+tail -f /share/frp/frpc.log &
 
 trap "stop_frpc" SIGTERM SIGHUP
 wait "${WAIT_PIDS[@]}"
