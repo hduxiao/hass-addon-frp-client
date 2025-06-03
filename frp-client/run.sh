@@ -27,7 +27,7 @@ cat $CONFIG_PATH
 cd /usr/src
 ./frpc -c $CONFIG_PATH & WAIT_PIDS+=($!)
 
-tail -f /share/frp/frpc.log &
+tail -f /share/frp/log/frpc.log &
 
 trap "stop_frpc" SIGTERM SIGHUP
 wait "${WAIT_PIDS[@]}"
