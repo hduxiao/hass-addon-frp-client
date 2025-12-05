@@ -3,7 +3,9 @@ Home Assistant Community Add-on: FRP Client
 
 You can leverage this add-on to achieve remote access to local Home Assistant OS by port forwarding.
 
-With ingress enabled, the FRP Web UI is available directly from the Home Assistant sidebar. The default ingress port is `7400` and is expected to match the configured FRP web server port.
+The add-on reads its FRP client configuration from `/share/frp/frpc.toml`. If the file does not exist when the add-on starts, th
+e bundled template is copied there automatically so you can adjust it to your environment. See `frp-client/DOCS.md` for configur
+ation details.
 
 ## Architecture
 <img width="800" src="https://github.com/huxiaoxu2019/hass-addon-frp-client/assets/5491423/58b8770e-dca5-4353-af27-e45494f78278">
