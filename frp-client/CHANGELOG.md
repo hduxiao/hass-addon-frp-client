@@ -1,3 +1,7 @@
+## 1.1.3
+
+- Update FRP to version 0.69.1
+
 ## 1.1.2
 
 - Update FRP to version 0.68.0
